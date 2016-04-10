@@ -1,7 +1,7 @@
-## Matrix inversion is a time consuming computational problem if it hass to be repeatedly calucated
+## Matrix inversion is a time consuming computational problem 
 ## The below  2 functions provide solution to this, by caching the matrix inversions.
 
-## makeCacheMatrix generates a list functions for the following 
+## makeCacheMatrix generates a list containing the following functions 
 ## 1.set the value of the matrix
 ## 2.get the value of the matrix
 ## 3.set the value of the inverse of a matrix
@@ -47,7 +47,7 @@ cacheSolve <- function(x, ...) {
     matrixInv <- x$getinverse()
     
     ## Check if the inverse of the matrix exists in cache.
-    ## if yes , then return the cached inverse and exit function.
+    ## if yes , then return the cached inverse and exit the function.
     
     if(!is.null(matrixInv)) {
       message("getting cached data")
@@ -57,7 +57,7 @@ cacheSolve <- function(x, ...) {
     ## If not, get the data 
     data <- x$get()
     
-    ## compute the inverse of the matrix by using solve(x) as it is invertible matrix
+    ## compute the inverse of the matrix by using solve(x) 
     matrixInv <- solve(data)
     
     ## set the cache to the computed inverse matrix
